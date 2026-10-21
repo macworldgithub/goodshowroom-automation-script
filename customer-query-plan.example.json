@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "sourceOrigin": "https://c2892-erapower.pentana.cloud",
+  "siteCode": "01",
+  "coverage": "filtered_query_set",
+  "maxRecordsPerQuery": 1000,
+  "queries": ["ADAMS"]
+}

@@ -1,0 +1,17 @@
+{
+  "url": "",
+  "frame": "",
+  "loaded": "",
+  "site": { "selector": "", "expectedText": "" },
+  "rows": "",
+  "next": null,
+  "maxPages": 100,
+  "maxRecords": 10000,
+  "fields": {
+    "external_id": { "selector": "" },
+    "first_name": { "selector": "" },
+    "last_name": { "selector": "" },
+    "email": { "selector": "" },
+    "phone": { "selector": "" }
+  }
+}

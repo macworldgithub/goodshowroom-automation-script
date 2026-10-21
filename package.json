@@ -1,0 +1,30 @@
+{
+  "name": "goodshowroom-automation-script",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "sync:customer-queries": "node --env-file-if-exists=.env customer-query-worker.mjs",
+    "sync:source": "node --env-file-if-exists=.env source-table-reader.mjs",
+    "integration:check": "node --env-file-if-exists=.env integration-check.mjs",
+    "sync:pilot": "node --env-file-if-exists=.env era-customer-pilot.mjs",
+    "browser:open": "node --env-file-if-exists=.env open-browser.mjs",
+    "backend:connect": "node --env-file-if-exists=.env backend-connect.mjs",
+    "sites:discover": "node --env-file-if-exists=.env era-sites.mjs",
+    "source:check": "node --env-file-if-exists=.env source-check.mjs",
+    "sites:status": "node --env-file-if-exists=.env all-sites-worker.mjs --status",
+    "sites:map": "node --env-file-if-exists=.env site-mapping.mjs",
+    "sync:all": "node --env-file-if-exists=.env all-sites-worker.mjs",
+    "session:login": "node --env-file-if-exists=.env erapower-session.mjs login",
+    "session:test": "node --env-file-if-exists=.env erapower-session.mjs test",
+    "session:inspect": "node --env-file-if-exists=.env erapower-session.mjs inspect",
+    "sync:preflight": "node --env-file-if-exists=.env customer-sync.mjs preflight",
+    "sync:customers": "node --env-file-if-exists=.env customer-sync.mjs read",
+    "sync:import": "node --env-file-if-exists=.env customer-sync.mjs import-file",
+    "sync:once": "node --env-file-if-exists=.env customer-worker.mjs --once",
+    "sync:watch": "node --env-file-if-exists=.env customer-worker.mjs --apply",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": { "playwright-core": "1.56.1" }
+}
